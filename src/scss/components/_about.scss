@@ -1,0 +1,36 @@
+.about {
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include mq("tablet-small", max) {
+			flex-direction: column;
+		}
+		@include mq("phablet") {
+			gap: 125px;
+		}
+	}
+	&__img {
+		padding: 0 0 50% 0;
+		flex: 0 0 33.333%;
+		@include mq("tablet-small", max) {
+			flex: 1 1 100%;
+			padding: 100% 90% 0 0;
+		}
+		& img {
+		}
+	}
+	&__content {
+		flex: 1 1 auto;
+	}
+	&__text {
+		font-size: 18px;
+		line-height: 1.5em;
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	}
+	&__btn {
+		width: 151px;
+	}
+}

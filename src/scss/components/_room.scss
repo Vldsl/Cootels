@@ -1,0 +1,133 @@
+.room {
+	&__inner {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__column {
+		flex: 0 0 50%;
+		@include mq("tablet-small", max) {
+			flex: 1 1 100%;
+			& + & {
+				margin-top: 50px;
+			}
+		}
+	}
+	&__suptitle {
+		margin-bottom: 12px;
+		@include font-source-sans(1rem, 1.5em, 500, var(--text));
+	}
+	&__title {
+		margin-bottom: 25px;
+	}
+	&__text {
+		width: 384px;
+		margin-bottom: 30px;
+		@include mq("tablet-small", max) {
+			width: 100%;
+		}
+	}
+	&__buttons {
+		display: flex;
+		align-items: center;
+		gap: 25px;
+	}
+	&__btn {
+		width: 148px;
+	}
+	&__link {
+		color: var(--bg_btn);
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+.accordion {
+	&__list {
+		filter: drop-shadow(0px 4px 30px rgba(255, 98, 10, 0.3));
+		// box-shadow: 0px 4px 30px rgba(255, 98, 10, 0.07);
+	}
+	&__item {
+		padding: 35px;
+		background: var(--bg_color);
+		border-radius: 4px;
+		& + & {
+			margin-top: 25px;
+		}
+	}
+	&__control {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		background-color: transparent;
+		cursor: pointer;
+		&.open .accordion__icon {
+			background-color: #FF620A;
+			&:before {
+				transform: translate(50%, -50%) rotate(-40deg);
+				background-color: #FFECE2;
+			}
+			&:after {
+				transform: translate(50%, -50%) rotate(40deg);
+				background-color: #FFECE2;
+			}
+		}
+		&.open + .accordion__content {
+			opacity: 1;
+			padding: 25px 0 0 0;
+		}
+	}
+	&__title {
+		font-family: 'Montserrat';
+		@include font-source-sans(1.5rem, 1.5em, 600, var(--text));
+		position: relative;
+	}
+	&__icon {
+		position: relative;
+		display: inline-block;
+		width: 40px;
+		height: 40px;
+		border-radius: 100%;
+		background-color: #FFECE2;
+		&:before,
+		&:after {
+			content: '';
+			width: 15px;
+			height: 3px;
+			border-radius: 10px;
+			background-color: #FF620A;
+			position: absolute;
+			top: 50%;
+			transition: all 0.3s ease 0s;
+			&.active {
+				background-color: var(--white);
+			}
+		}
+		&:before {
+			transform: translate(50%, -50%) rotate(40deg);
+			right: 37%;
+			&.active {
+				transform: rotate(-40deg);
+			}
+		}
+		&:after {
+			transform: translate(50%, -50%) rotate(-40deg);
+			right: 63%;
+			&.active {
+				transform: rotate(40deg);
+			}
+		}
+	}
+	&__content {
+		max-height: 0;
+		opacity: 0;
+		overflow: hidden;
+		padding: 0;
+		font-size: 1.125rem;
+		line-height: 1.5em;
+		will-change: max-height;
+		transition: all 0.3s ease-out;
+		box-sizing: content-box;
+	}
+}

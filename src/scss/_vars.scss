@@ -1,0 +1,20 @@
+:root {
+	--white: #fff;
+	--black: #000;
+	--h3_color: #000;
+	--bg_color: #fff;
+	--text: #424F7B;
+	--bg_footer: #0B265A;
+	--bg_btn: #0E1734;
+	--main_color: #848FAC;
+	--semi_color: #192252;
+}
+:root.dark_mode {
+	--bg_color: #1e1e1e;
+	--semi_color: #FF620A;
+	--bg_btn: #FAB047;
+	--h3_color: #fff;
+}
+
+$fz: 0.875rem;
+$font-primary: "Poppins", sans-serif;

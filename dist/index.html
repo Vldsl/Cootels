@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head></head>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0">
+    <meta name="theme-color" content="#111111">
+    <link rel="shortcut icon" href="./img/favicon/favicon.svg">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <title>Cootels </title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header" id="header">
+        <div class="container">
+          <div class="header__inner"><a class="header__logo" href="#">
+              <svg class="header__logo_icon">
+                <use xlink:href="#header__logo"></use>
+              </svg></a>
+            <div class="header__menu">
+              <div class="header__menu_icon"> <span> </span></div>
+              <nav class="menu">
+                <ul class="menu__list">
+                  <li class="menu__item"> <a class="menu__link" href="#">Rooms</a></li>
+                  <li class="menu__item"> <a class="menu__link" href="#">Reservation</a></li>
+                  <li class="menu__item"> <a class="menu__link" href="#">Contacs</a></li>
+                </ul>
+              </nav>
+            </div><a class="header__btn btn" href="#">Get Started</a>
+          </div>
+        </div>
+      </header>
+      <main class="page"> 
+        <svg style="display: none;">
+          <symbol id="twitter" viewBox="0 0 32 32">
+            <g>
+              <path d="M32 6.078C30.81 6.6 29.542 6.946 28.22 7.114C29.58 6.302 30.618 5.026 31.106 3.488C29.838 4.244 28.438 4.778 26.946 5.076C25.742 3.794 24.026 3 22.154 3C18.522 3 15.598 5.948 15.598 9.562C15.598 10.082 15.642 10.582 15.75 11.058C10.296 10.792 5.47 8.178 2.228 4.196C1.662 5.178 1.33 6.302 1.33 7.512C1.33 9.784 2.5 11.798 4.244 12.964C3.19 12.944 2.156 12.638 1.28 12.156C1.28 12.176 1.28 12.202 1.28 12.228C1.28 15.416 3.554 18.064 6.536 18.674C6.002 18.82 5.42 18.89 4.816 18.89C4.396 18.89 3.972 18.866 3.574 18.778C4.424 21.376 6.836 23.286 9.704 23.348C7.472 25.094 4.638 26.146 1.57 26.146C1.032 26.146 0.516 26.122 0 26.056C2.906 27.93 6.35 29 10.064 29C22.136 29 28.736 19 28.736 10.332C28.736 10.042 28.726 9.762 28.712 9.484C30.014 8.56 31.108 7.406 32 6.078Z"></path>
+            </g>
+          </symbol>
+          <symbol id="instagram" viewBox="0 0 32 32">
+            <g>
+              <path d="M23.1688 0H8.8306C3.96141 0 0 3.9616 0 8.83079V23.169C0 28.0384 3.96141 31.9998 8.8306 31.9998H23.1688C28.0384 31.9998 31.9998 28.0382 31.9998 23.169V8.83079C32 3.9616 28.0384 0 23.1688 0ZM29.1608 23.169C29.1608 26.4729 26.4729 29.1606 23.169 29.1606H8.8306C5.52693 29.1608 2.83918 26.4729 2.83918 23.169V8.83079C2.83918 5.52712 5.52693 2.83918 8.8306 2.83918H23.1688C26.4727 2.83918 29.1606 5.52712 29.1606 8.83079V23.169H29.1608Z"></path>
+              <path d="M15.9999 7.75482C11.4533 7.75482 7.75439 11.4537 7.75439 16.0004C7.75439 20.5468 11.4533 24.2455 15.9999 24.2455C20.5466 24.2455 24.2455 20.5468 24.2455 16.0004C24.2455 11.4537 20.5466 7.75482 15.9999 7.75482ZM15.9999 21.4062C13.019 21.4062 10.5936 18.9811 10.5936 16.0002C10.5936 13.019 13.0188 10.5938 15.9999 10.5938C18.9811 10.5938 21.4063 13.019 21.4063 16.0002C21.4063 18.9811 18.9809 21.4062 15.9999 21.4062Z"></path>
+              <path d="M24.5913 5.34735C24.0443 5.34735 23.507 5.56881 23.1206 5.95683C22.7324 6.34296 22.5093 6.88051 22.5093 7.42941C22.5093 7.97662 22.7326 8.51398 23.1206 8.902C23.5068 9.28813 24.0443 9.51148 24.5913 9.51148C25.1402 9.51148 25.6759 9.28813 26.0639 8.902C26.4519 8.51398 26.6734 7.97643 26.6734 7.42941C26.6734 6.88051 26.4519 6.34296 26.0639 5.95683C25.6778 5.56881 25.1402 5.34735 24.5913 5.34735Z"></path>
+            </g>
+          </symbol>
+          <symbol id="facebook" viewBox="0 0 32 32">
+            <g>
+              <path d="M21.3295 5.31333H24.2508V0.225333C23.7468 0.156 22.0135 0 19.9948 0C15.7828 0 12.8975 2.64933 12.8975 7.51867V12H8.24951V17.688H12.8975V32H18.5962V17.6893H23.0562L23.7642 12.0013H18.5948V8.08267C18.5962 6.43867 19.0388 5.31333 21.3295 5.31333Z"></path>
+            </g>
+          </symbol>
+          <symbol id="header__logo" viewBox="0 0 121 25">
+            <g>
+              <path d="M12.376 24.32C10.1147 24.32 8.06667 23.8293 6.232 22.848C4.41867 21.8453 2.98933 20.4693 1.944 18.72C0.92 16.9707 0.408 14.9973 0.408 12.8C0.408 10.6027 0.930667 8.62933 1.976 6.88C3.02133 5.13067 4.45067 3.76533 6.264 2.784C8.09867 1.78133 10.1467 1.28 12.408 1.28C14.2427 1.28 15.9173 1.6 17.432 2.24C18.9467 2.88 20.2267 3.808 21.272 5.024L18.584 7.552C16.9627 5.80267 14.968 4.928 12.6 4.928C11.064 4.928 9.688 5.26933 8.472 5.952C7.256 6.61333 6.30667 7.54133 5.624 8.736C4.94133 9.93067 4.6 11.2853 4.6 12.8C4.6 14.3147 4.94133 15.6693 5.624 16.864C6.30667 18.0587 7.256 18.9973 8.472 19.68C9.688 20.3413 11.064 20.672 12.6 20.672C14.968 20.672 16.9627 19.7867 18.584 18.016L21.272 20.576C20.2267 21.792 18.936 22.72 17.4 23.36C15.8853 24 14.2107 24.32 12.376 24.32ZM31.929 24.224C30.201 24.224 28.6437 23.8507 27.257 23.104C25.8703 22.3573 24.7823 21.3227 23.993 20C23.225 18.656 22.841 17.1413 22.841 15.456C22.841 13.7707 23.225 12.2667 23.993 10.944C24.7823 9.62133 25.8703 8.58667 27.257 7.84C28.6437 7.09333 30.201 6.72 31.929 6.72C33.6783 6.72 35.2463 7.09333 36.633 7.84C38.0197 8.58667 39.097 9.62133 39.865 10.944C40.6543 12.2667 41.049 13.7707 41.049 15.456C41.049 17.1413 40.6543 18.656 39.865 20C39.097 21.3227 38.0197 22.3573 36.633 23.104C35.2463 23.8507 33.6783 24.224 31.929 24.224ZM31.929 20.8C33.401 20.8 34.617 20.3093 35.577 19.328C36.537 18.3467 37.017 17.056 37.017 15.456C37.017 13.856 36.537 12.5653 35.577 11.584C34.617 10.6027 33.401 10.112 31.929 10.112C30.457 10.112 29.241 10.6027 28.281 11.584C27.3423 12.5653 26.873 13.856 26.873 15.456C26.873 17.056 27.3423 18.3467 28.281 19.328C29.241 20.3093 30.457 20.8 31.929 20.8ZM52.554 24.224C50.826 24.224 49.2687 23.8507 47.882 23.104C46.4953 22.3573 45.4073 21.3227 44.618 20C43.85 18.656 43.466 17.1413 43.466 15.456C43.466 13.7707 43.85 12.2667 44.618 10.944C45.4073 9.62133 46.4953 8.58667 47.882 7.84C49.2687 7.09333 50.826 6.72 52.554 6.72C54.3033 6.72 55.8713 7.09333 57.258 7.84C58.6447 8.58667 59.722 9.62133 60.49 10.944C61.2793 12.2667 61.674 13.7707 61.674 15.456C61.674 17.1413 61.2793 18.656 60.49 20C59.722 21.3227 58.6447 22.3573 57.258 23.104C55.8713 23.8507 54.3033 24.224 52.554 24.224ZM52.554 20.8C54.026 20.8 55.242 20.3093 56.202 19.328C57.162 18.3467 57.642 17.056 57.642 15.456C57.642 13.856 57.162 12.5653 56.202 11.584C55.242 10.6027 54.026 10.112 52.554 10.112C51.082 10.112 49.866 10.6027 48.906 11.584C47.9673 12.5653 47.498 13.856 47.498 15.456C47.498 17.056 47.9673 18.3467 48.906 19.328C49.866 20.3093 51.082 20.8 52.554 20.8ZM75.771 23.072C75.3017 23.456 74.7257 23.744 74.043 23.936C73.3817 24.128 72.6777 24.224 71.931 24.224C70.0537 24.224 68.603 23.7333 67.579 22.752C66.555 21.7707 66.043 20.3413 66.043 18.464V10.24H63.227V7.04H66.043V3.136H70.043V7.04H74.619V10.24H70.043V18.368C70.043 19.2 70.2457 19.84 70.651 20.288C71.0563 20.7147 71.643 20.928 72.411 20.928C73.307 20.928 74.0537 20.6933 74.651 20.224L75.771 23.072ZM94.563 15.552C94.563 15.8293 94.5417 16.224 94.499 16.736H81.091C81.3257 17.9947 81.9337 18.9973 82.915 19.744C83.9177 20.4693 85.155 20.832 86.627 20.832C88.5043 20.832 90.051 20.2133 91.267 18.976L93.411 21.44C92.643 22.3573 91.6723 23.0507 90.499 23.52C89.3257 23.9893 88.003 24.224 86.531 24.224C84.6537 24.224 83.0003 23.8507 81.571 23.104C80.1417 22.3573 79.0323 21.3227 78.243 20C77.475 18.656 77.091 17.1413 77.091 15.456C77.091 13.792 77.4643 12.2987 78.211 10.976C78.979 9.632 80.035 8.58667 81.379 7.84C82.723 7.09333 84.2377 6.72 85.923 6.72C87.587 6.72 89.0697 7.09333 90.371 7.84C91.6937 8.56533 92.7177 9.6 93.443 10.944C94.1897 12.2667 94.563 13.8027 94.563 15.552ZM85.923 9.92C84.643 9.92 83.555 10.304 82.659 11.072C81.7843 11.8187 81.251 12.8213 81.059 14.08H90.755C90.5843 12.8427 90.0617 11.84 89.187 11.072C88.3123 10.304 87.2243 9.92 85.923 9.92ZM98.4053 0.255999H102.405V24H98.4053V0.255999ZM112.935 24.224C111.549 24.224 110.194 24.0427 108.871 23.68C107.549 23.3173 106.493 22.8587 105.703 22.304L107.239 19.264C108.007 19.776 108.925 20.192 109.991 20.512C111.079 20.8107 112.146 20.96 113.191 20.96C115.581 20.96 116.775 20.3307 116.775 19.072C116.775 18.4747 116.466 18.0587 115.847 17.824C115.25 17.5893 114.279 17.3653 112.935 17.152C111.527 16.9387 110.375 16.6933 109.479 16.416C108.605 16.1387 107.837 15.6587 107.175 14.976C106.535 14.272 106.215 13.3013 106.215 12.064C106.215 10.4427 106.887 9.152 108.231 8.192C109.597 7.21067 111.431 6.72 113.735 6.72C114.909 6.72 116.082 6.85867 117.255 7.136C118.429 7.392 119.389 7.744 120.135 8.192L118.599 11.232C117.149 10.3787 115.517 9.952 113.703 9.952C112.53 9.952 111.634 10.1333 111.015 10.496C110.418 10.8373 110.119 11.296 110.119 11.872C110.119 12.512 110.439 12.9707 111.079 13.248C111.741 13.504 112.754 13.7493 114.119 13.984C115.485 14.1973 116.605 14.4427 117.479 14.72C118.354 14.9973 119.101 15.4667 119.719 16.128C120.359 16.7893 120.679 17.728 120.679 18.944C120.679 20.544 119.986 21.824 118.599 22.784C117.213 23.744 115.325 24.224 112.935 24.224Z"></path>
+            </g>
+          </symbol>
+          <symbol id="footer__logo" viewBox="0 0 122 25">
+            <g> 
+              <path d="M12.376 24.384C10.0933 24.384 8.024 23.8933 6.168 22.912C4.33333 21.9093 2.88267 20.5333 1.816 18.784C0.770667 17.0133 0.248 15.0187 0.248 12.8C0.248 10.5813 0.770667 8.59733 1.816 6.848C2.88267 5.07733 4.33333 3.70133 6.168 2.72C8.024 1.71733 10.104 1.216 12.408 1.216C14.3493 1.216 16.0987 1.55733 17.656 2.24C19.2347 2.92267 20.5573 3.904 21.624 5.184L18.296 8.256C16.7813 6.50667 14.904 5.632 12.664 5.632C11.2773 5.632 10.04 5.94133 8.952 6.56C7.864 7.15733 7.01067 8 6.392 9.088C5.79467 10.176 5.496 11.4133 5.496 12.8C5.496 14.1867 5.79467 15.424 6.392 16.512C7.01067 17.6 7.864 18.4533 8.952 19.072C10.04 19.6693 11.2773 19.968 12.664 19.968C14.904 19.968 16.7813 19.0827 18.296 17.312L21.624 20.384C20.5573 21.6853 19.2347 22.6773 17.656 23.36C16.0773 24.0427 14.3173 24.384 12.376 24.384ZM32.051 24.256C30.2377 24.256 28.6057 23.8827 27.155 23.136C25.7257 22.368 24.6057 21.312 23.795 19.968C22.9843 18.624 22.579 17.0987 22.579 15.392C22.579 13.6853 22.9843 12.16 23.795 10.816C24.6057 9.472 25.7257 8.42667 27.155 7.68C28.6057 6.912 30.2377 6.528 32.051 6.528C33.8643 6.528 35.4857 6.912 36.915 7.68C38.3443 8.42667 39.4643 9.472 40.275 10.816C41.0857 12.16 41.491 13.6853 41.491 15.392C41.491 17.0987 41.0857 18.624 40.275 19.968C39.4643 21.312 38.3443 22.368 36.915 23.136C35.4857 23.8827 33.8643 24.256 32.051 24.256ZM32.051 20.16C33.331 20.16 34.3763 19.7333 35.187 18.88C36.019 18.0053 36.435 16.8427 36.435 15.392C36.435 13.9413 36.019 12.7893 35.187 11.936C34.3763 11.0613 33.331 10.624 32.051 10.624C30.771 10.624 29.715 11.0613 28.883 11.936C28.051 12.7893 27.635 13.9413 27.635 15.392C27.635 16.8427 28.051 18.0053 28.883 18.88C29.715 19.7333 30.771 20.16 32.051 20.16ZM52.6998 24.256C50.8864 24.256 49.2544 23.8827 47.8038 23.136C46.3744 22.368 45.2544 21.312 44.4438 19.968C43.6331 18.624 43.2278 17.0987 43.2278 15.392C43.2278 13.6853 43.6331 12.16 44.4438 10.816C45.2544 9.472 46.3744 8.42667 47.8038 7.68C49.2544 6.912 50.8864 6.528 52.6998 6.528C54.5131 6.528 56.1344 6.912 57.5638 7.68C58.9931 8.42667 60.1131 9.472 60.9238 10.816C61.7344 12.16 62.1398 13.6853 62.1398 15.392C62.1398 17.0987 61.7344 18.624 60.9238 19.968C60.1131 21.312 58.9931 22.368 57.5638 23.136C56.1344 23.8827 54.5131 24.256 52.6998 24.256ZM52.6998 20.16C53.9798 20.16 55.0251 19.7333 55.8358 18.88C56.6678 18.0053 57.0838 16.8427 57.0838 15.392C57.0838 13.9413 56.6678 12.7893 55.8358 11.936C55.0251 11.0613 53.9798 10.624 52.6998 10.624C51.4198 10.624 50.3638 11.0613 49.5318 11.936C48.6998 12.7893 48.2838 13.9413 48.2838 15.392C48.2838 16.8427 48.6998 18.0053 49.5318 18.88C50.3638 19.7333 51.4198 20.16 52.6998 20.16ZM76.2605 23.168C75.7698 23.5307 75.1618 23.808 74.4365 24C73.7325 24.1707 72.9858 24.256 72.1965 24.256C70.1485 24.256 68.5592 23.7333 67.4285 22.688C66.3192 21.6427 65.7645 20.1067 65.7645 18.08V11.008H63.1085V7.168H65.7645V2.976H70.7565V7.168H75.0445V11.008H70.7565V18.016C70.7565 18.7413 70.9378 19.3067 71.3005 19.712C71.6845 20.096 72.2178 20.288 72.9005 20.288C73.6898 20.288 74.3618 20.0747 74.9165 19.648L76.2605 23.168ZM95.0755 15.456C95.0755 15.52 95.0435 15.968 94.9795 16.8H81.9555C82.1902 17.8667 82.7448 18.7093 83.6195 19.328C84.4942 19.9467 85.5822 20.256 86.8835 20.256C87.7795 20.256 88.5688 20.128 89.2515 19.872C89.9555 19.5947 90.6062 19.168 91.2035 18.592L93.8595 21.472C92.2382 23.328 89.8702 24.256 86.7555 24.256C84.8142 24.256 83.0968 23.8827 81.6035 23.136C80.1102 22.368 78.9582 21.312 78.1475 19.968C77.3368 18.624 76.9315 17.0987 76.9315 15.392C76.9315 13.7067 77.3262 12.192 78.1155 10.848C78.9262 9.48267 80.0248 8.42667 81.4115 7.68C82.8195 6.912 84.3875 6.528 86.1155 6.528C87.8008 6.528 89.3262 6.89067 90.6915 7.616C92.0568 8.34133 93.1235 9.38667 93.8915 10.752C94.6808 12.096 95.0755 13.664 95.0755 15.456ZM86.1475 10.304C85.0168 10.304 84.0675 10.624 83.2995 11.264C82.5315 11.904 82.0622 12.7787 81.8915 13.888H90.3715C90.2008 12.8 89.7315 11.936 88.9635 11.296C88.1955 10.6347 87.2568 10.304 86.1475 10.304ZM98.079 0.255999H103.071V24H98.079V0.255999ZM113.176 24.256C111.747 24.256 110.349 24.0853 108.984 23.744C107.619 23.3813 106.531 22.9333 105.72 22.4L107.384 18.816C108.152 19.3067 109.08 19.712 110.168 20.032C111.256 20.3307 112.323 20.48 113.368 20.48C115.48 20.48 116.536 19.9573 116.536 18.912C116.536 18.4213 116.248 18.0693 115.672 17.856C115.096 17.6427 114.211 17.4613 113.016 17.312C111.608 17.0987 110.445 16.8533 109.528 16.576C108.611 16.2987 107.811 15.808 107.128 15.104C106.467 14.4 106.136 13.3973 106.136 12.096C106.136 11.008 106.445 10.048 107.064 9.216C107.704 8.36267 108.621 7.70133 109.816 7.232C111.032 6.76267 112.461 6.528 114.104 6.528C115.32 6.528 116.525 6.66667 117.72 6.944C118.936 7.2 119.939 7.56267 120.728 8.032L119.064 11.584C117.549 10.7307 115.896 10.304 114.104 10.304C113.037 10.304 112.237 10.4533 111.704 10.752C111.171 11.0507 110.904 11.4347 110.904 11.904C110.904 12.4373 111.192 12.8107 111.768 13.024C112.344 13.2373 113.261 13.44 114.52 13.632C115.928 13.8667 117.08 14.1227 117.976 14.4C118.872 14.656 119.651 15.136 120.312 15.84C120.973 16.544 121.304 17.5253 121.304 18.784C121.304 19.8507 120.984 20.8 120.344 21.632C119.704 22.464 118.765 23.1147 117.528 23.584C116.312 24.032 114.861 24.256 113.176 24.256Z"></path>
+            </g>
+          </symbol>
+          <symbol id="dark" viewBox="0 0 24 24">
+            <g> 
+              <path d="M12 3a9 9 0 108.9 7.64 5.39 5.39 0 01-9.2-5.61 5.4 5.4 0 011.66-1.93c-.44-.06-.9-.1-1.36-.1z"></path>
+            </g>
+          </symbol>
+        </svg>
+        <section class="intro">
+          <div class="container"> 
+            <div class="intro__inner">
+              <div class="intro__content">
+                <h1 class="intro__title">Nature, Warmth, and Beauty in&nbsp;One Space</h1>
+                <p class="intro__txt">One place to&nbsp;release all the stress, bring back happines, and get back to&nbsp;nature. We&nbsp;provide the best room and nature for you. Come visit&nbsp;us anytime you want.</p><a class="intro__btn btn" href="">Reservation </a>
+              </div>
+              <div class="intro__img _ibg"><img src="./img/Intro/intro-img.png" alt=""></div>
+            </div>
+          </div>
+        </section>
+        <section class="about">
+          <div class="container">
+            <div class="about__inner">
+              <div class="about__img _ibg"><img src="./img/About/about-img.jpg" alt=""></div>
+              <div class="about__content">
+                <h2 class="section__title">Cozy and Down to&nbsp;Earth Cootage Hotel in&nbsp;Norway.</h2>
+                <div class="about__text">
+                  <p>Our Cootage Hotel is&nbsp;an&nbsp;intimate hideway concieved for dicerning travelers. It&nbsp;faces directly the unique and spectacular panorama of&nbsp;the Hallerbos Jungle.</p>
+                  <p>Cootels extends along a&nbsp;private, quiet, and beautiful nature. Stay away from crowd and enjoy the cozy and beauty with&nbsp;us.</p>
+                </div><a class="about__btn btn" href="#">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="benefit">
+          <div class="container"> 
+            <div class="benefit__inner"> 
+              <div class="benefit__row">
+                <div class="benefit__content"> 
+                  <h2 class="section__title">Cabin Activities</h2>
+                  <div class="benefit__text">Don&rsquo;t worry to&nbsp;get bored easily in&nbsp;our cabin. We&nbsp;have so&nbsp;many cabin activities for you to&nbsp;do&nbsp;it&nbsp;alone or&nbsp;with group. Maybe this is&nbsp;the best chance for you to&nbsp;make new friends or&nbsp;even a&nbsp;lover.</div>
+                </div>
+                <div class="benefit__img _ibg"><img src="./img/Benefit/benefit-img-1.jpg" alt=""></div>
+              </div>
+              <div class="benefit__row">
+                <div class="benefit__img _ibg"><img src="./img/Benefit/benefit-img-2.jpg" alt=""></div>
+                <div class="benefit__content"> 
+                  <h2 class="section__title">100% Organic Food</h2>
+                  <div class="benefit__text">We&nbsp;served 100% organic, low process and delicious food. We&nbsp;allow our guest to&nbsp;have breakfast or&nbsp;dinner request.What ever made your taste buds happy.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="reservation">
+          <div class="container"> 
+            <div class="reservation__top"> 
+              <h2 class="section__title">Many Rooms to&nbsp;Choose</h2>
+              <div class="reservation__text"> 
+                <p>There is&nbsp;a&nbsp;room for every needs. We&nbsp;have room for individuals until family size, we&nbsp;also have a&nbsp;cabin for more private experience</p>
+              </div><a class="reservation__btn btn" href="#" target="_blank">Explore more</a>
+            </div>
+            <div class="reservation__inner"> 
+              <div class="reservation__column">
+                <article class="reservation__item item-reservation">
+                  <div class="item-reservation__img _ibg"><img src="./img/Reservation/reservation-img-1.jpg" alt="" style="background-color: #0B265A"></div>
+                  <div class="item-reservation__content"> 
+                    <h3 class="item-reservation__title">Single Room</h3>
+                    <div class="item-reservation__text"> 
+                      <p>Best for a&nbsp;brave lone wolf who need comfort and quiet quality time, but you still have a&nbsp;chance to&nbsp;meet others.</p>
+                    </div><a class="item-reservation__link" href="#" target="_blank" style="background-image: url(./img/Reservation/arrow.svg)">Learn more</a>
+                  </div>
+                </article>
+              </div>
+              <div class="reservation__column">
+                <article class="reservation__item item-reservation">
+                  <div class="item-reservation__img _ibg"><img src="./img/Reservation/reservation-img-2.jpg" alt=""></div>
+                  <div class="item-reservation__content"> 
+                    <h3 class="item-reservation__title">Double Room</h3>
+                    <div class="item-reservation__text"> 
+                      <p>Best for couple, seek happiness in&nbsp;intimacy without worry of&nbsp;being disturbed. Feel the whole world just for you two</p>
+                    </div><a class="item-reservation__link" href="#" target="_blank" style="background-image: url(./img/Reservation/arrow.svg)">Learn more</a>
+                  </div>
+                </article>
+              </div>
+              <div class="reservation__column">
+                <article class="reservation__item item-reservation">
+                  <div class="item-reservation__img _ibg"><img src="./img/Reservation/reservation-img-3.jpg" alt=""></div>
+                  <div class="item-reservation__content"> 
+                    <h3 class="item-reservation__title">Cootage</h3>
+                    <div class="item-reservation__text"> 
+                      <p>Best for family or&nbsp;group. One cootage can fit up&nbsp;to&nbsp;5&nbsp;people. Made stronger bond with your family or&nbsp;friends</p>
+                    </div><a class="item-reservation__link" href="#" target="_blank" style="background-image: url(./img/Reservation/arrow.svg)">Learn more</a>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="room">
+          <div class="container"> 
+            <div class="room__inner"> 
+              <div class="room__column">
+                <p class="room__suptitle">Start your journey!</p>
+                <h2 class="section__title">How to&nbsp;Get My&nbsp;Room?</h2>
+                <div class="room__text"> 
+                  <p>You can contact&nbsp;us by&nbsp;phone or&nbsp;email&nbsp;us. Easily tap the contact button below and it&nbsp;will take you to&nbsp;our contact point</p>
+                </div>
+                <div class="room__buttons"> <a class="room__btn btn" href="#">Contact us</a><a class="room__link" href="#" target="_blank">Explore more room</a></div>
+              </div>
+              <div class="room__column">
+                <ul class="accordion__list accordion">
+                  <li class="accordion__item">
+                    <button class="accordion__control">
+                      <h4 class="accordion__title">1. Choose a&nbsp;room and date</h4><span class="accordion__icon"></span>
+                    </button>
+                    <div class="accordion__content">
+                      <p>Contact&nbsp;us via phone or&nbsp;email, ask for availability of&nbsp;you choice of&nbsp;room. We&nbsp;might offer you something exciting.</p>
+                    </div>
+                  </li>
+                  <li class="accordion__item">
+                    <button class="accordion__control">
+                      <h4 class="accordion__title">2. Check for room availability</h4><span class="accordion__icon"></span>
+                    </button>
+                    <div class="accordion__content">
+                      <p>Contact&nbsp;us via phone or&nbsp;email, ask for availability of&nbsp;you choice of&nbsp;room. We&nbsp;might offer you something exciting.</p>
+                    </div>
+                  </li>
+                  <li class="accordion__item">
+                    <button class="accordion__control">
+                      <h4 class="accordion__title">3. Enjoy your room</h4><span class="accordion__icon"></span>
+                    </button>
+                    <div class="accordion__content">
+                      <p>Contact&nbsp;us via phone or&nbsp;email, ask for availability of&nbsp;you choice of&nbsp;room. We&nbsp;might offer you something exciting.</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="testimonials">
+          <div class="container"> 
+            <div class="testimonials__inner"> 
+              <div class="testimonials__slider slider">
+                <div class="slider__container">
+                  <div class="slider__track">
+                    <div class="slider__item active">
+                      <h2 class="section__title slider__title">Hear From Our Happy Customers</h2><img class="slider__img" src="./img/Testimonials/testimonials-img-1.jpg" alt="Author">
+                      <div class="slider__text"> 
+                        <p>&laquo;Great service, great food, great people. The scenery is&nbsp;also beautiful, you can do&nbsp;so&nbsp;much activity even with your famility. Worth every penny! you should come and see for your self.&nbsp;5&nbsp;out of&nbsp;5! the waffle is&nbsp;great!&raquo;</p>
+                      </div>
+                      <p class="slider__author">Kirana Dunham</p>
+                    </div>
+                    <div class="slider__item">
+                      <h2 class="section__title slider__title">Hear From Our Happy Customers</h2><img class="slider__img" src="./img/Testimonials/testimonials-img-1.jpg" alt="Author">
+                      <div class="slider__text"> 
+                        <p>&laquo;Great service, great food, great people. The scenery is&nbsp;also beautiful, you can do&nbsp;so&nbsp;much activity even with your famility. Worth every penny! you should come and see for your self.&nbsp;5&nbsp;out of&nbsp;5! the waffle is&nbsp;great!&raquo;</p>
+                      </div>
+                      <p class="slider__author">Kirana Dunham</p>
+                    </div>
+                    <div class="slider__item">
+                      <h2 class="section__title slider__title">Hear From Our Happy Customers</h2><img class="slider__img" src="./img/Testimonials/testimonials-img-1.jpg" alt="Author">
+                      <div class="slider__text"> 
+                        <p>&laquo;Great service, great food, great people. The scenery is&nbsp;also beautiful, you can do&nbsp;so&nbsp;much activity even with your famility. Worth every penny! you should come and see for your self.&nbsp;5&nbsp;out of&nbsp;5! the waffle is&nbsp;great!&raquo;</p>
+                      </div>
+                      <p class="slider__author">Kirana Dunham</p>
+                    </div>
+                    <div class="slider__item">
+                      <h2 class="section__title slider__title">Hear From Our Happy Customers</h2><img class="slider__img" src="./img/Testimonials/testimonials-img-1.jpg" alt="Author">
+                      <div class="slider__text"> 
+                        <p>&laquo;Great service, great food, great people. The scenery is&nbsp;also beautiful, you can do&nbsp;so&nbsp;much activity even with your famility. Worth every penny! you should come and see for your self.&nbsp;5&nbsp;out of&nbsp;5! the waffle is&nbsp;great!&raquo;</p>
+                      </div>
+                      <p class="slider__author">Kirana Dunham</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="dots"> 
+                  <div class="dot active"></div>
+                  <div class="dot"> </div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                </div>
+                <div class="slider__buttons"> 
+                  <button class="btn__prev">Prev</button>
+                  <button class="btn__next">Next</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer" style="background-color: #0B265A">
+        <div class="container">
+          <div class="footer__inner">
+            <div class="footer__column"><a class="footer__logo" href="#"> 
+                <svg class="footer__logo-icon">
+                  <use xlink:href="#footer__logo"></use>
+                </svg></a>
+              <div class="footer__text"> 
+                <p>Your Best Private Hideway From Crowd. Back to Nature.</p>
+              </div>
+              <div class="footer__social"> <a class="social__item" href="#" target="_blank">
+                  <svg class="social__icon">
+                    <use xlink:href="#twitter"></use>
+                  </svg></a><a class="social__item" href="#" target="_blank">
+                  <svg class="social__icon">
+                    <use xlink:href="#instagram"></use>
+                  </svg></a><a class="social__item" href="#" target="_blank">
+                  <svg class="social__icon">
+                    <use xlink:href="#facebook"></use>
+                  </svg></a></div>
+            </div>
+            <ul class="footer__list"> 
+              <li class="footer__item"> <a class="footer__link" href="">Rooms</a><span class="footer__list_arrow arrow"></span>
+                <ul class="footer__sublist">
+                  <li class="footer__item"> <a class="footer__link" href="">Single Room</a></li>
+                  <li class="footer__item"> <a class="footer__link" href="">Double Room</a></li>
+                  <li class="footer__item"> <a class="footer__link" href="">Cabin</a></li>
+                  <li class="footer__item"> <a class="footer__link" href="">Custom Room</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="footer__list"> 
+              <li class="footer__item"> <a class="footer__link" href="">Reservation</a><span class="footer__list_arrow arrow"></span>
+                <ul class="footer__sublist">
+                  <li class="footer__item"> <a class="footer__link" href="">See the Steps</a></li>
+                  <li class="footer__item"> <a class="footer__link" href="">Best Time</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="footer__list"> 
+              <li class="footer__item"> <a class="footer__link" href="">Contact</a><span class="footer__list_arrow"></span>
+                <ul class="footer__sublist">
+                  <li class="footer__item"> <a class="footer__link" href="">Our Number</a></li>
+                  <li class="footer__item"> <a class="footer__link" href="">Our Email</a></li>
+                  <li class="footer__item"> <a class="footer__link" href="">Our Location</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <button class="toggle__theme"></button>
+    <button class="scroll_up"></button>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

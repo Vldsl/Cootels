@@ -1,0 +1,101 @@
+.footer {
+	padding-top: 10%;
+	padding-bottom: 10%;
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		@include mq("phablet", max) {
+			flex-direction: column;
+		}
+	}
+	&__column {
+		flex: 0 1 35%;
+	}
+	&__logo {
+		margin-bottom: 15px;
+		width: 124px;
+		height: 39px;
+		&-icon {
+			display: block;
+			height: 39px;
+			fill: var(--white);
+			transition: fill 0.1s linear;
+		}
+	}
+	&__text {
+		margin-bottom: 35px;
+		width: 186px;
+		font-size: 1rem;
+		line-height: 1.75em;
+		color: #D9DBDE;
+		@include mq("phablet", max) {
+			width: auto;
+		}
+	}
+	&__social {
+		display: flex;
+		gap: 25px;
+	}
+	.social__item {
+		width: 32px;
+		height: 32px;
+		&:hover .social__icon {
+			fill: var(--main_color);
+		}
+	}
+	.social__icon {
+		display: block;
+		height: 32px;
+		fill: var(--white);
+		transition: fill 0.1s linear;
+	}
+	&__list {
+		&_arrow {
+			@include mq("phablet", max) {
+				position: absolute;
+				right: 0;
+				top: 30px;
+				transform: translateY(-50%);
+				width: 0;
+				height: 0;
+				border-top: 10px solid var(--white);
+				border-right: 10px solid transparent;
+				border-left: 10px solid transparent;
+				&.active{transform: rotate(-180deg);}
+			}
+		}
+		& > .footer__item {
+			position: relative;
+		}
+		& > .footer__item > .footer__link{
+			@include font-source-sans(1rem, 1.1875em, 700, var(--white));
+			letter-spacing: 0.01em;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			&:hover {
+				color: var(--black);
+			}
+		}
+	}
+	&__sublist {
+		@include mq("phablet", max) {
+			display: none;
+			&.open {
+				display: block;
+			}
+		}
+	}
+	&__item {
+		& + & {
+			margin-top: 25px;
+		}
+	}
+	&__link {
+		font-size: 1rem;
+		line-height: 1.1875em;
+		color: #D9DBDE;
+		&:hover {
+			color: var(--black);
+		}
+	}
+}
