@@ -1,18 +1,17 @@
 header.header#header
-	.container
-		.header__inner
-			a.header__logo(href="#")
-				svg.header__logo_icon
-					use(xlink:href="#header__logo")
-			.header__menu
-				.header__menu_icon 
-					span 
-				nav.menu
-					ul.menu__list
-						li.menu__item 
-							a.menu__link(href="#") Rooms
-						li.menu__item 
-							a.menu__link(href="#") Reservation
-						li.menu__item 
-							a.menu__link(href="#") Contacs
-			a.header__btn.btn(href="#") Get Started
+	.header__container
+		a.header__logo.logo(href="#")
+			svg.logo__icon
+				use(xlink:href="#logo")
+		nav.header__menu.menu
+			button.menu__icon(type="button", aria-label="Open menu")
+				span
+			.menu__body
+				ul.menu__list
+					li.menu__item 
+						a.menu__link(href="#") Rooms
+					li.menu__item 
+						a.menu__link(href="#") Reservation
+					li.menu__item 
+						a.menu__link(href="#") Contacs
+		a.header__link.page-link(href="#") Get Started

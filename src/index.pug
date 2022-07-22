@@ -1,12 +1,14 @@
 doctype html
 html(lang="en")
 	head
-	include html/head
+	@@include('html/head.pug', {
+		"title": "Cootels"
+	})
 	body
+		include html/sprite
 		.wrapper
 			include html/header
 			main.page 
-				include html/sprite
 				include html/intro
 				include html/about
 				include html/benefit
@@ -17,21 +19,7 @@ html(lang="en")
 		button.toggle__theme
 		button.scroll_up
 		script(src="js/app.min.js")
-		//- Доделать хвосты
-		//- Залить на хостинг
+		
 		//- Натянуть на wordPress
-		//- Доделать JS код  - complete
-		//- Поменять переменные - complete
-		//- Перевести единицы в относительные  - complete
-		//- Почистить код, убрать лишние комментарии, выводы в консоль  - complete
-		//- Разобраться с отступами между секциями - complete
-		//- Добавить темную тему!!!!!!!!!!!!!!!!!!!!!!!! - complete
-		//- Сделать адаптив - complete
-		//- Добавить ховер на кнопки при наведении - complete
-		//- Исправить цвет у кнопок - complete
-		//- Доделать слайдер - complete
-		//- Доделать аккордеон - complete
-		//- Что-то решить с картинкой на интро - complete
-		//- Добавить кнопку наверх - complete
-
-		//- Вообщем, задавать отступы относительно контейнера логичней всего!
+		//- Разобраться с иконками, переписать их в спрайт(иконка темной и светлой темы, стрелка наверх)
+		

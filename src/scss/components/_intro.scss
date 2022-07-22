@@ -1,61 +1,70 @@
 .intro {
-	position: relative;
-	height: 100vh;
+	margin: 0 0 rem(150) 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	@include mq("tablet-small", max) {
-		height: auto;
+
+	@include mq("desktop-wide") {
+		padding: rem(125) 0 rem(100) 0;
 	}
-	&__inner {
-		padding-top: 5%;
+
+	@include mq("tablet", range, "desktop-wide") {
+		padding: rem(100) 0 rem(75) 0;
+	}
+
+	@include mq("tablet", max) {
+		padding: rem(100) 0 rem(50) 0;
+	}
+
+	&__container {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
 		@include mq("tablet-small", max) {
 			flex-direction: column-reverse;
 		}
+
 		@include mq("phablet") {
-			gap: 5rem;
+			gap: rem(80);
 		}
-		@include mq("phone-wide", max) {
-			padding-top: 10%;
-		}
+
 	}
+
 	&__content {
-		flex: 1 1 auto;
 		display: flex;
 		flex-direction: column;
+		align-items: start;
+
+		@include mq("tablet-small") {
+			flex: 0 1 rem(512);
+		}
+
 		@include mq("tablet-small", max) {
 			width: 100%;
 		}
 	}
+
 	&__img {
-		flex: 0 0 45%;
-		padding: 0 0 55% 0;
-		@include mq("tablet-small", max) {
-			flex: 1 1 100%;
-			padding: 100% 90% 0 0;
-		}
-		& img {
-		}
+		& img {}
 	}
 
 	&__title {
-		margin-bottom: 25px;
+		margin: 0 0 rem(25) 0;
 		font-family: 'Montserrat';
-		@include font-source-sans(3rem, 1.5em, 600, var(--semi_color));
+		@include font-source-sans(rem(48), 1.5, 600, var(--semi_color));
 		letter-spacing: -0.01em;
+
 		@include mq("phone-wide", max) {
-			font-size: 2.25rem;
+			font-size: rem(36);
 		}
 	}
-	&__txt {
-		margin-bottom: 30px;
-		@include font-source-sans(1.125rem, 1.5em, 400, var(--main_color));
+
+	&__text {
+		margin: 0 0 rem(30) 0;
+		font-size: rem(18);
+		color: var(--main_color);
 	}
-	&__btn {
-		width: 155px;
-		padding: 16px 32px;
-	}
+
+	&__link {}
 }

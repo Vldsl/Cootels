@@ -9,6 +9,7 @@
 	--main_color: #848FAC;
 	--semi_color: #192252;
 }
+
 :root.dark_mode {
 	--bg_color: #1e1e1e;
 	--semi_color: #FF620A;
@@ -16,5 +17,5 @@
 	--h3_color: #fff;
 }
 
-$fz: 0.875rem;
-$font-primary: "Poppins", sans-serif;
+$fontSize: 14;
+$font-primary: "Inter", sans-serif;

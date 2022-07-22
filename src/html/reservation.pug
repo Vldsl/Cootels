@@ -1,14 +1,14 @@
 section.reservation
-	.container 
-		.reservation__top 
-			h2.section__title Many Rooms to&nbsp;Choose
+	.reservation__container 
+		.reservation__header
+			h2.reservation__title.page-title Many Rooms to&nbsp;Choose
 			.reservation__text 
 				p There is&nbsp;a&nbsp;room for every needs. We&nbsp;have room for individuals until family size, we&nbsp;also have a&nbsp;cabin for more private experience
-			a.reservation__btn.btn(href="#", target="_blank") Explore more
+			a.reservation__link.page-link(href="#", target="_blank") Explore more
 		.reservation__inner 
 			.reservation__column
 				article.reservation__item.item-reservation
-					.item-reservation__img._ibg
+					.item-reservation__img
 						img(src="./img/Reservation/reservation-img-1.jpg", alt="" style="background-color: #0B265A")
 					.item-reservation__content 
 						h3.item-reservation__title Single Room
@@ -17,7 +17,7 @@ section.reservation
 						a.item-reservation__link(href="#", target="_blank" style="background-image: url(./img/Reservation/arrow.svg)") Learn more
 			.reservation__column
 				article.reservation__item.item-reservation
-					.item-reservation__img._ibg
+					.item-reservation__img
 						img(src="./img/Reservation/reservation-img-2.jpg", alt="")
 					.item-reservation__content 
 						h3.item-reservation__title Double Room
@@ -26,7 +26,7 @@ section.reservation
 						a.item-reservation__link(href="#", target="_blank" style="background-image: url(./img/Reservation/arrow.svg)") Learn more
 			.reservation__column
 				article.reservation__item.item-reservation
-					.item-reservation__img._ibg
+					.item-reservation__img
 						img(src="./img/Reservation/reservation-img-3.jpg", alt="")
 					.item-reservation__content 
 						h3.item-reservation__title Cootage

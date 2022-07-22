@@ -1,38 +1,39 @@
 .benefit {
-	&__inner {
-	}
+	margin: 0 0 rem(150) 0;
+
 	&__row {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		gap: 30px;
+
+		@include mq("desktop", max) {
+			gap: rem(30);
+		}
+
 		@include mq("phablet", max) {
 			flex-direction: column;
 		}
-		& + & {
-			@include mq("phablet", max) {
-				margin-top: 30px;
-			}
+
+		&+& {
+			margin: rem(30) 0 0 0;
 		}
 	}
+
 	&__content {
-		flex: 1 1 auto;
+		@include mq("phablet") {
+			flex: 0 1 rem(585);
+		}
 	}
+
+	&__title {
+		margin: 0 0 rem(25) 0;
+	}
+
 	&__text {
-		font-size: 18px;
-		line-height: 150%;
+		font-size: rem(18);
 	}
+
 	&__img {
-		flex: 0 0 33.33%;
-		padding: 0 0 33.333% 0;
-		@include mq("tablet-small", max) {
-			flex: 0 1 100%;
-			padding: 50% 50% 0 0;
-		}
-		@include mq("phablet", max) {
-			padding: 50% 100% 0 0;
-		}
-		& img {
-		}
+		& img {}
 	}
 }

@@ -20,9 +20,9 @@ window.addEventListener('scroll', () => {
 
 // ================== Replace header button
 document.addEventListener('DOMContentLoaded', () => {
-	const headerBtn = document.querySelector('.header__btn');
+	const headerBtn = document.querySelector('.header__link');
 	const menuList = document.querySelector('.menu__list');
-	const headerInner = document.querySelector('.header__inner');
+	const headerInner = document.querySelector('.header__container');
 	if (headerBtn) {
 		function replaceBtn() {
 			if (document.documentElement.offsetWidth <= 768) {
@@ -31,22 +31,20 @@ document.addEventListener('DOMContentLoaded', () => {
 				headerInner.append(headerBtn);
 			}
 		}
-		window.addEventListener('resize', () => {
-			replaceBtn();
-		});
+		window.addEventListener('resize', replaceBtn);
 		replaceBtn();
 	}
 });
 
 // =======================Menu
 document.addEventListener('DOMContentLoaded', () => {
-	const iconMenu = document.querySelector('.header__menu_icon');
-	const menu = document.querySelector('.menu');
-	if (iconMenu) {
-		iconMenu.addEventListener("click", function (e) {
+	const menuIcon = document.querySelector('.menu__icon');
+	const menu = document.querySelector('.menu__body');
+	if (menuIcon) {
+		menuIcon.addEventListener('click', function (e) {
+			menuIcon.classList.toggle('_active');
 			document.body.classList.toggle('lock');
-			iconMenu.classList.toggle('active');
-			menu.classList.toggle('active');
+			menu.classList.toggle('_open');
 		});
 	}
 });
@@ -93,22 +91,20 @@ function addDarkClassToHTML() {
 }
 addDarkClassToHTML();
 
-// ======================Accordion
-const accordionControl = document.querySelectorAll('.accordion__control');
-if (accordionControl.length > 0) {
-	accordionControl.forEach(el => {
-		el.addEventListener('click', function () {
-			const content = this.nextElementSibling;
-			if (this.classList.contains('open')) {
-				this.classList.remove('open');
-				content.style.maxHeight = null;
-			} else {
-				for (el of accordionControl) {
-					el.nextElementSibling.style.maxHeight = null;
-					el.classList.remove('open');
-				}
-				this.classList.add('open');
+// ======================Spoiler
+const accordions = document.querySelectorAll('.spoiler-room__item');
+if (accordions) {
+	accordions.forEach(el => {
+		el.addEventListener('click', (e) => {
+			const self = e.currentTarget;
+			const content = self.querySelector('.spoiler-room__content');
+
+			self.classList.toggle('open');
+
+			if (self.classList.contains('open')) {
 				content.style.maxHeight = content.scrollHeight + 'px';
+			} else {
+				content.style.maxHeight = null;
 			}
 		});
 	});
@@ -116,12 +112,12 @@ if (accordionControl.length > 0) {
 
 // ==============================Slider
 document.addEventListener('DOMContentLoaded', () => {
-	const container = document.querySelector('.slider__container');
-	const track = document.querySelector('.slider__track');
-	const items = document.querySelectorAll('.slider__item');
-	const btnPrev = document.querySelector('.btn__prev');
-	const btnNext = document.querySelector('.btn__next');
-	const dots = document.querySelectorAll('.dot');
+	const container = document.querySelector('.slider-testimonials__body');
+	const track = document.querySelector('.slider-testimonials__track');
+	const items = document.querySelectorAll('.slider-testimonials__item');
+	const btnPrev = document.querySelector('.control__btn_prev');
+	const btnNext = document.querySelector('.control__btn_next');
+	const dots = document.querySelectorAll('.pagination__item');
 	let width = container.offsetWidth;
 	let count = 0;
 	if (items.length > 0) {
@@ -135,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 		window.addEventListener('resize', init);
 		init();
-		const nextSlide = () => { //Функция переключает на следующий слайд и сравнивает с последним слайдом
+		const nextSlide = () => {
 			count++;
 			if (count >= items.length) {
 				count = 0;
@@ -143,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			activeDot(count);
 			rollsSlider();
 		}
-		const prevSlide = () => { // Функция переключает на предыдущий слайд и сравнивает с первым слайдом
+		const prevSlide = () => {
 			count--;
 			if (count < 0) {
 				count = items.length - 1;
@@ -151,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			activeDot(count);
 			rollsSlider();
 		}
-		function rollsSlider() { // Функция перемещает слайд, индекс умножает на ширину слайда, чем больше индекс тем на большее значение происходит перемещение
+		function rollsSlider() {
 			track.style.transform = 'translate(-' + count * width + 'px)';
 		}
 		function activeDot(n) {
@@ -182,3 +178,28 @@ arrows.forEach(function (el) {
 		el.classList.toggle('active');
 	});
 });
+
+// Footer list
+const wrapperList = document.querySelectorAll('.footer__wrapper-list');
+if (wrapperList.length > 0) {
+	wrapperList.forEach(el => {
+		el.addEventListener('click', (e) => {
+
+
+
+			const self = e.currentTarget;
+			self.classList.toggle('_active');
+
+			// wrapperList.forEach(item => {
+			// item.classList.remove('_active');
+			// 	if (item.classList.contains('_active') && e.target !== item) {
+			// 		console.log('I did it');
+			// 		wrapperList.forEach(item => {
+			// 			item.classList.remove('_active');
+			// 		})
+			// 	}
+			// })
+
+		})
+	})
+}
